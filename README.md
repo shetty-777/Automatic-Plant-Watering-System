@@ -1,4 +1,4 @@
-# Automatic-Plant-Watering-System
+# Automatic Plant Watering System
 
 ![Circuit](https://user-images.githubusercontent.com/90843436/198832746-de757784-c96c-4fa1-ac33-293d97efa5e6.png)
     The aim of the project is, as the name suggests, to create an automatic plant watering sysytem. This is one of the classic microcontroller project ideas. You will find many such projects, and this is just one more.
