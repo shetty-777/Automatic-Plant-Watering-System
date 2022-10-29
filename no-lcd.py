@@ -19,9 +19,7 @@ while True:
     #------------------------------------------------------------------------#
     if int(percent)<50: #Turns the motor on if the percentage is less that 50 and turns it off if above 50. Feel free to change the value
         motor.value(1)
-        motor_stat = "ON"
     else:
         motor.value(0)
-        motor_stat = "OFF"
     #------------------------------------------------------------------------#
     utime.sleep(3) #Refresh rate, increse for faster readings and vice-versa
