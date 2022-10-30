@@ -30,7 +30,7 @@ while True:
     #------------------------------------------------------------------------#
     print(f"Percentage: {percent}%    Value: {str(soil.read_u16())}") #Prints the percentage and ADC value
     #------------------------------------------------------------------------#
-    if int(percent)<50: #Turns the motor on if the percentage is less that 50 and turns it off if above 50. Feel free to change the value
+    if int(percent)<50: #Turns the motor on if the percentage is less than 50 and turns it off if above 50. Feel free to change the value
         motor.value(1)
         motor_stat = "ON"
     else:
@@ -43,4 +43,4 @@ while True:
     lcd.move_to(0,1)
     lcd.putstr(f"Motor stat: {motor_stat}")
     #------------------------------------------------------------------------#
-    utime.sleep(3) #Refresh rate, increse for faster readings and vice-versa
+    utime.sleep(3) #Refresh rate, decrease for faster readings and vice-versa
