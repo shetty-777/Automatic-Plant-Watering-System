@@ -5,7 +5,6 @@ soil = ADC(Pin(26)) #Sensor pin
 motor = Pin(21, Pin.OUT) #Motor pin(connected to the middle pin of transistor)
 min_value=28650 #min value obtained during calibration
 max_value=45550 #max value obtained during calibration
-LED = Pin(25, Pin.OUT) #Onboard LED
 ##############################################################################
 while True:
     moisture = (max_value-soil.read_u16())*100/(max_value-min_value) #Reads value and converts it to percentage
@@ -17,9 +16,9 @@ while True:
     #------------------------------------------------------------------------#
     print(f"Percentage: {percent}%    Value: {str(soil.read_u16())}") #Prints the percentage and ADC value
     #------------------------------------------------------------------------#
-    if int(percent)<50: #Turns the motor on if the percentage is less that 50 and turns it off if above 50. Feel free to change the value
+    if int(percent)<50: #Turns the motor on if the percentage is less than 50 and turns it off if above 50. Feel free to change the value
         motor.value(1)
     else:
         motor.value(0)
     #------------------------------------------------------------------------#
-    utime.sleep(3) #Refresh rate, increse for faster readings and vice-versa
+    utime.sleep(3) #Refresh rate, decrease for faster readings and vice-versa
